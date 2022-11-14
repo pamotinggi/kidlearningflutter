@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kidlearningflutter/screen/viewdata/gamescorelvl1.dart';
+import 'package:kidlearningflutter/screen/viewdata/gamescorelvl2.dart';
 
 class Gamescoremain extends StatefulWidget {
   const Gamescoremain({Key? key}) : super(key: key);
@@ -42,7 +43,10 @@ class _GamescoremainState extends State<Gamescoremain> {
                 width: 190,
                 height: 100,
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).pushReplacement(MaterialPageRoute(
+                        builder: (context) => Gamescorelvl2()));
+                  },
                   child: Text(
                     "Level 2",
                     style: TextStyle(
