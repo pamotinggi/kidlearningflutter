@@ -4,7 +4,7 @@ A new Flutter project.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+Dalam projek ini ada 3 komponen penting.
 
 A few resources to get you started if this is your first Flutter project:
 
