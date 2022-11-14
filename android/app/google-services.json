@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "924665447645",
+    "project_id": "kidlearnflutter",
+    "storage_bucket": "kidlearnflutter.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:924665447645:android:2012260306062431d50734",
+        "android_client_info": {
+          "package_name": "com.example.kidlearningflutter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "924665447645-ebuder7ahk6j58mmc8to5qlql6r5qghv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCrOjG7zJ8FN_nE1NH3vDMt_3P_GAfq0PU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "924665447645-ebuder7ahk6j58mmc8to5qlql6r5qghv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
