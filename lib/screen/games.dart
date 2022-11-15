@@ -17,6 +17,7 @@ class _Games extends State<Games> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Color(0xff3B3486),
         automaticallyImplyLeading: false,
         leading: IconButton(
             icon: Icon(Icons.arrow_back, color: Colors.black),
@@ -29,71 +30,93 @@ class _Games extends State<Games> {
           textAlign: TextAlign.center,
         ),
       ),
-      body: Center(
-        child: Column(
-          children: <Widget>[
-            Container(
-              height: 200,
-              decoration: const BoxDecoration(
-                  image: DecorationImage(
-                      image: AssetImage("asset/let's.png"), fit: BoxFit.fill)),
+      body: Stack(
+        children: <Widget>[
+          Expanded(
+            child: Container(
+              color: Color(0xff3B3486),
             ),
-            SizedBox(height: 20),
-            SizedBox(
-              width: 150,
-              height: 90,
-              child: ElevatedButton(
-                onPressed: () {
-                  Navigator.of(context).pushReplacement(
-                      MaterialPageRoute(builder: (context) => Game1()));
-                },
-                child: Text(
-                  "Easy",
-                  style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
+          ),
+          Center(
+            child: Column(
+              children: <Widget>[
+                Container(
+                  height: 200,
+                  decoration: const BoxDecoration(
+                      image: DecorationImage(
+                          image: AssetImage("asset/gamenew.png"),
+                          fit: BoxFit.fill)),
+                ),
+                SizedBox(height: 20),
+                SizedBox(
+                  width: 150,
+                  height: 90,
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      primary: Color(0xffFFE9B1),
+                    ),
+                    onPressed: () {
+                      Navigator.of(context).pushReplacement(
+                          MaterialPageRoute(builder: (context) => Game1()));
+                    },
+                    child: Text(
+                      "Easy",
+                      style: TextStyle(
+                        fontSize: 20,
+                        color: Colors.black54,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
                   ),
                 ),
-              ),
-            ),
-            SizedBox(height: 5),
-            SizedBox(
-              width: 150,
-              height: 90,
-              child: ElevatedButton(
-                onPressed: () {
-                  Navigator.of(context).pushReplacement(
-                      MaterialPageRoute(builder: (context) => Game2()));
-                },
-                child: Text(
-                  "Medium",
-                  style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
+                SizedBox(height: 5),
+                SizedBox(
+                  width: 150,
+                  height: 90,
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      primary: Color(0xffFFE9B1),
+                    ),
+                    onPressed: () {
+                      Navigator.of(context).pushReplacement(
+                          MaterialPageRoute(builder: (context) => Game2()));
+                    },
+                    child: Text(
+                      "Medium",
+                      style: TextStyle(
+                        fontSize: 20,
+                        color: Colors.black54,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
                   ),
                 ),
-              ),
-            ),
-            SizedBox(height: 5),
-            SizedBox(
-              width: 150,
-              height: 90,
-              child: ElevatedButton(
-                onPressed: () {
-                  Navigator.of(context).pushReplacement(
-                      MaterialPageRoute(builder: (context) => Game3()));
-                },
-                child: Text(
-                  "Hard",
-                  style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
+                SizedBox(height: 5),
+                SizedBox(
+                  width: 150,
+                  height: 90,
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      primary: Color(0xffFFE9B1),
+                    ),
+                    onPressed: () {
+                      Navigator.of(context).pushReplacement(
+                          MaterialPageRoute(builder: (context) => Game3()));
+                    },
+                    child: Text(
+                      "Hard",
+                      style: TextStyle(
+                        fontSize: 20,
+                        color: Colors.black54,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
                   ),
                 ),
-              ),
+              ],
             ),
-          ],
-        ),
+          ),
+        ],
       ),
       floatingActionButton: SpeedDial(
         icon: Icons.menu,

@@ -66,6 +66,7 @@ class _Game1State extends State<Game1> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
+        backgroundColor: Color(0xff3B3486),
         centerTitle: true,
         title: Text('Matching Game'),
         leading: IconButton(
