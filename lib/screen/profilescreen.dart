@@ -1,9 +1,11 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:kidlearningflutter/screen/alphabetscreen.dart';
 import 'package:kidlearningflutter/screen/games.dart';
 import 'package:kidlearningflutter/screen/loginscreen.dart';
+import 'package:kidlearningflutter/screen/profile_extension/levelscreen.dart';
 import 'package:kidlearningflutter/screen/profile_extension/score_main.dart';
 import 'package:kidlearningflutter/screen/sentencesreen.dart';
 
@@ -79,7 +81,10 @@ class _ProfileScreen extends State<ProfileScreen> {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: <Widget>[
                       ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.of(context).pushReplacement(MaterialPageRoute(
+                              builder: (context) => Levelscreen()));
+                        },
                         child: Text("Level"),
                       ),
                       SizedBox(
@@ -202,13 +207,8 @@ class NavigationDrawer extends StatelessWidget {
         children: <Widget>[
           SizedBox(height: 30),
           ListTile(
-            leading: const Icon(Icons.home),
-            title: const Text('Home'),
-            onTap: () {},
-          ),
-          ListTile(
-            leading: const Icon(Icons.people),
-            title: const Text('Profile'),
+            leading: const Icon(EvaIcons.info),
+            title: const Text('About'),
             onTap: () {},
           ),
           ListTile(
