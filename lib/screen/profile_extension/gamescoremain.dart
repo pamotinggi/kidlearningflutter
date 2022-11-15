@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kidlearningflutter/screen/profile_extension/score_main.dart';
 import 'package:kidlearningflutter/screen/viewdata/gamescorelvl1.dart';
 import 'package:kidlearningflutter/screen/viewdata/gamescorelvl2.dart';
 import 'package:kidlearningflutter/screen/viewdata/gamescorelvl3.dart';
@@ -15,6 +16,12 @@ class _GamescoremainState extends State<Gamescoremain> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: IconButton(
+            icon: Icon(Icons.arrow_back, color: Colors.black),
+            onPressed: () {
+              Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => ScoreMain()));
+            }),
         title: Text("Game Score"),
       ),
       body: Center(
