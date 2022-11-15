@@ -3,6 +3,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:kidlearningflutter/model/game_view.dart';
 import 'package:kidlearningflutter/model/user_model.dart';
+import 'package:kidlearningflutter/screen/profile_extension/gamescoremain.dart';
 import 'package:kidlearningflutter/widget/game_card.dart';
 
 class Gamescorelvl1 extends StatefulWidget {
@@ -37,6 +38,12 @@ class _Gamescorelvl1State extends State<Gamescorelvl1> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: IconButton(
+            icon: Icon(Icons.arrow_back, color: Colors.black),
+            onPressed: () {
+              Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => Gamescoremain()));
+            }),
         title: Text("Game Score Level 1"),
       ),
       body: Container(

@@ -104,12 +104,7 @@ class _Sentencelvl3State extends State<Sentencelvl3> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: IconButton(
-            icon: Icon(Icons.arrow_back, color: Colors.black),
-            onPressed: () {
-              Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => SentenceSreen()));
-            }),
+
         title: Text("Verb Level"),
       ),
       body: SingleChildScrollView(
