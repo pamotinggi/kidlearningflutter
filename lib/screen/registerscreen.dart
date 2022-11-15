@@ -6,20 +6,20 @@ import 'package:fluttertoast/fluttertoast.dart';
 import '../model/user_model.dart';
 import 'loginscreen.dart';
 
-class RegisterScreen extends StatefulWidget{
+class RegisterScreen extends StatefulWidget {
   _RegisterScreen createState() => _RegisterScreen();
 }
 
-class _RegisterScreen extends State<RegisterScreen>{
+class _RegisterScreen extends State<RegisterScreen> {
   final _formKey = GlobalKey<FormState>();
   final nameEditingController = new TextEditingController();
   final usernameEditingController = new TextEditingController();
   final emailEditingController = new TextEditingController();
   final passwordEditingController = new TextEditingController();
   final confirmPasswordEditingController = new TextEditingController();
-  
+
   FirebaseAuth _auth = FirebaseAuth.instance;
-  
+
   @override
   Widget build(BuildContext context) {
     final nameField = TextFormField(
@@ -40,6 +40,8 @@ class _RegisterScreen extends State<RegisterScreen>{
       },
       textInputAction: TextInputAction.next,
       decoration: InputDecoration(
+        fillColor: Colors.white,
+        filled: true,
         prefixIcon: Icon(Icons.account_circle),
         contentPadding: EdgeInsets.fromLTRB(20, 15, 20, 15),
         hintText: "Name",
@@ -66,6 +68,8 @@ class _RegisterScreen extends State<RegisterScreen>{
       },
       textInputAction: TextInputAction.next,
       decoration: InputDecoration(
+        fillColor: Colors.white,
+        filled: true,
         prefixIcon: Icon(Icons.account_circle),
         contentPadding: EdgeInsets.fromLTRB(20, 15, 20, 15),
         hintText: "Username",
@@ -92,6 +96,8 @@ class _RegisterScreen extends State<RegisterScreen>{
       },
       textInputAction: TextInputAction.next,
       decoration: InputDecoration(
+        fillColor: Colors.white,
+        filled: true,
         prefixIcon: Icon(Icons.mail),
         contentPadding: EdgeInsets.fromLTRB(20, 15, 20, 15),
         hintText: "Email",
@@ -118,6 +124,8 @@ class _RegisterScreen extends State<RegisterScreen>{
       },
       textInputAction: TextInputAction.next,
       decoration: InputDecoration(
+        fillColor: Colors.white,
+        filled: true,
         prefixIcon: Icon(Icons.vpn_key),
         contentPadding: EdgeInsets.fromLTRB(20, 15, 20, 15),
         hintText: "Password",
@@ -142,6 +150,8 @@ class _RegisterScreen extends State<RegisterScreen>{
       },
       textInputAction: TextInputAction.done,
       decoration: InputDecoration(
+        fillColor: Colors.white,
+        filled: true,
         prefixIcon: Icon(Icons.vpn_key),
         contentPadding: EdgeInsets.fromLTRB(20, 15, 20, 15),
         hintText: "Confirm password",
@@ -163,7 +173,7 @@ class _RegisterScreen extends State<RegisterScreen>{
           textAlign: TextAlign.center,
           style: TextStyle(
             fontSize: 20,
-            color: Colors.white,
+            color: Color(0xffFFE9B1),
             fontWeight: FontWeight.bold,
           ),
         ),
@@ -172,7 +182,7 @@ class _RegisterScreen extends State<RegisterScreen>{
       ),
     );
     return Scaffold(
-      backgroundColor: Colors.lightBlue,
+      backgroundColor: Color(0xff3B3486),
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
@@ -181,48 +191,73 @@ class _RegisterScreen extends State<RegisterScreen>{
             Icons.arrow_back,
             color: Colors.red,
           ),
-          onPressed: (){
+          onPressed: () {
             Navigator.of(context).pop();
           },
         ),
       ),
-      body: Center(
-        child: SingleChildScrollView(
-          child: Container(
-            color: Colors.lightBlue,
-            child: Padding(
-              padding: const EdgeInsets.all(36),
-              child: Form(
-                key: _formKey,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: <Widget>[
-                    SizedBox(
-                      height: 200,
-                      child: Image.asset("asset/loginillus.png", fit: BoxFit.contain,),
+      body: Stack(
+        children: <Widget>[
+          Expanded(
+            child: Container(
+              color: Color(0xff3B3486),
+            ),
+          ),
+          Center(
+            child: SingleChildScrollView(
+              child: Container(
+                color: Color(0xff3B3486),
+                child: Padding(
+                  padding: const EdgeInsets.all(36),
+                  child: Form(
+                    key: _formKey,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: <Widget>[
+                        SizedBox(
+                          height: 200,
+                          child: Image.asset(
+                            "asset/loginillus.png",
+                            fit: BoxFit.contain,
+                          ),
+                        ),
+                        SizedBox(
+                          height: 15,
+                        ),
+                        nameField,
+                        SizedBox(
+                          height: 15,
+                        ),
+                        usernameField,
+                        SizedBox(
+                          height: 15,
+                        ),
+                        emailField,
+                        SizedBox(
+                          height: 15,
+                        ),
+                        passwordField,
+                        SizedBox(
+                          height: 15,
+                        ),
+                        confirmpasswordField,
+                        SizedBox(
+                          height: 15,
+                        ),
+                        signupButton,
+                      ],
                     ),
-                    SizedBox(height: 15,),
-                    nameField,
-                    SizedBox(height: 15,),
-                    usernameField,
-                    SizedBox(height: 15,),
-                    emailField,
-                    SizedBox(height: 15,),
-                    passwordField,
-                    SizedBox(height: 15,),
-                    confirmpasswordField,
-                    SizedBox(height: 15,),
-                    signupButton,
-                  ],
+                  ),
                 ),
               ),
             ),
           ),
-        ),
+        ],
       ),
     );
   }
+
 //method untuk register guna firebase
   void signup(String email, String password) async {
     if (_formKey.currentState!.validate()) {
@@ -234,6 +269,7 @@ class _RegisterScreen extends State<RegisterScreen>{
         });
     }
   }
+
 //method untuk store all of the user data dalam collection user kat firebase
   posDetailsToFirestore() async {
     FirebaseFirestore firebasefirestore = FirebaseFirestore.instance;
@@ -252,6 +288,6 @@ class _RegisterScreen extends State<RegisterScreen>{
     Navigator.pushAndRemoveUntil(
         context,
         MaterialPageRoute(builder: (context) => LoginScreen()),
-            (route) => false);
+        (route) => false);
   }
 }

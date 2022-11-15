@@ -104,7 +104,7 @@ class _Sentencelvl3State extends State<Sentencelvl3> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-
+        backgroundColor: Color(0xff3B3486),
         title: Text("Verb Level"),
       ),
       body: SingleChildScrollView(

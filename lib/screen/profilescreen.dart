@@ -35,147 +35,178 @@ class _ProfileScreen extends State<ProfileScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.transparent,
+        backgroundColor: Color(0xff3B3486),
         elevation: 0.5,
       ),
       drawer: const NavigationDrawer(),
-      body: SingleChildScrollView(
-        child: Column(
-          children: <Widget>[
-            Container(
-              height: 200,
-              decoration: const BoxDecoration(
-                  image: DecorationImage(
-                      image: AssetImage("asset/welsome.png"),
-                      fit: BoxFit.fill)),
+      body: Stack(
+        children: <Widget>[
+          Expanded(
+            child: Container(
+              color: Color(0xff3B3486),
             ),
-            Container(
-              width: 200,
-              height: 95,
-              color: Colors.lightBlue,
+          ),
+          Center(
+            child: SingleChildScrollView(
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
-                  Text("You log in as : ",
-                      style: TextStyle(
-                          color: Colors.red,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 20)),
+                  Container(
+                    height: 200,
+                    decoration: const BoxDecoration(
+                        image: DecorationImage(
+                            image: AssetImage("asset/welsome.png"),
+                            fit: BoxFit.fill)),
+                  ),
+                  Container(
+                    width: 200,
+                    height: 95,
+                    color: Color(0xff7743DB),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: <Widget>[
+                        Text("You log in as : ",
+                            style: TextStyle(
+                                color: Colors.white54,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 20)),
+                        Container(
+                          child: Column(
+                            children: <Widget>[
+                              Text(
+                                '${currentUser.firstName}',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 20,
+                                  color: Colors.black,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: <Widget>[
+                            ElevatedButton(
+                              onPressed: () {
+                                Navigator.of(context).pushReplacement(
+                                    MaterialPageRoute(
+                                        builder: (context) => Levelscreen()));
+                              },
+                              child: Text(
+                                "Level",
+                                style: TextStyle(color: Colors.black),
+                              ),
+                              style: ElevatedButton.styleFrom(
+                                primary: Color(0xffFFE9B1),
+                              ),
+                            ),
+                            SizedBox(
+                              width: 15,
+                            ),
+                            ElevatedButton(
+                              onPressed: () {
+                                Navigator.of(context).pushReplacement(
+                                    MaterialPageRoute(
+                                        builder: (context) => ScoreMain()));
+                              },
+                              child: Text(
+                                "Score",
+                                style: TextStyle(color: Colors.black),
+                              ),
+                              style: ElevatedButton.styleFrom(
+                                primary: Color(0xffFFE9B1),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                  SizedBox(
+                    height: 30,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      SizedBox(
+                        width: 150,
+                        height: 90,
+                        child: ElevatedButton(
+                          onPressed: () {
+                            Navigator.of(context).pushReplacement(
+                                MaterialPageRoute(
+                                    builder: (context) => AlphabetScreen()));
+                          },
+                          child: Text(
+                            "Alphabet",
+                            style:
+                                TextStyle(fontSize: 20, color: Colors.black54),
+                          ),
+                          style: ElevatedButton.styleFrom(
+                            primary: Color(0xffFFE9B1),
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        width: 20,
+                      ),
+                      SizedBox(
+                        width: 150,
+                        height: 90,
+                        child: ElevatedButton(
+                          onPressed: () {
+                            Navigator.of(context).pushReplacement(
+                                MaterialPageRoute(
+                                    builder: (context) => SentenceSreen()));
+                          },
+                          child: Text(
+                            "Sentences",
+                            style:
+                                TextStyle(fontSize: 20, color: Colors.black54),
+                          ),
+                          style: ElevatedButton.styleFrom(
+                            primary: Color(0xffFFE9B1),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
                   Container(
                     child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
-                        Text(
-                          '${currentUser.firstName}',
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 20,
-                            color: Colors.blueGrey,
+                        SizedBox(
+                          width: 150,
+                          height: 90,
+                          child: ElevatedButton(
+                            onPressed: () {
+                              Navigator.of(context).pushReplacement(
+                                  MaterialPageRoute(
+                                      builder: (context) => Games()));
+                            },
+                            child: Text(
+                              "Games",
+                              style: TextStyle(
+                                  fontSize: 20, color: Colors.black54),
+                            ),
+                            style: ElevatedButton.styleFrom(
+                              primary: Color(0xffFFE9B1),
+                            ),
                           ),
                         ),
                       ],
                     ),
                   ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: <Widget>[
-                      ElevatedButton(
-                        onPressed: () {
-                          Navigator.of(context).pushReplacement(MaterialPageRoute(
-                              builder: (context) => Levelscreen()));
-                        },
-                        child: Text("Level"),
-                      ),
-                      SizedBox(
-                        width: 15,
-                      ),
-                      ElevatedButton(
-                        onPressed: () {
-                          Navigator.of(context).pushReplacement(MaterialPageRoute(
-                              builder: (context) => ScoreMain()));
-                        },
-                        child: Text("Score"),
-                      ),
-                    ],
-                  ),
                 ],
               ),
             ),
-            SizedBox(
-              height: 30,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                SizedBox(
-                  width: 150,
-                  height: 90,
-                  child: ElevatedButton(
-                    onPressed: () {
-                      Navigator.of(context).pushReplacement(MaterialPageRoute(
-                          builder: (context) => AlphabetScreen()));
-                    },
-                    child: Text(
-                      "Alphabet",
-                      style: TextStyle(fontSize: 20, color: Colors.black54),
-                    ),
-                    style: ElevatedButton.styleFrom(
-                      primary: Colors.blue,
-                    ),
-                  ),
-                ),
-                SizedBox(
-                  width: 20,
-                ),
-                SizedBox(
-                  width: 150,
-                  height: 90,
-                  child: ElevatedButton(
-                    onPressed: () {
-                      Navigator.of(context).pushReplacement(MaterialPageRoute(
-                          builder: (context) => SentenceSreen()));
-                    },
-                    child: Text(
-                      "Sentences",
-                      style: TextStyle(fontSize: 20, color: Colors.black54),
-                    ),
-                    style: ElevatedButton.styleFrom(
-                      primary: Colors.blue,
-                    ),
-                  ),
-                ),
-              ],
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            Container(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  SizedBox(
-                    width: 150,
-                    height: 90,
-                    child: ElevatedButton(
-                      onPressed: () {
-                        Navigator.of(context).pushReplacement(
-                            MaterialPageRoute(builder: (context) => Games()));
-                      },
-                      child: Text(
-                        "Games",
-                        style: TextStyle(fontSize: 20, color: Colors.black54),
-                      ),
-                      style: ElevatedButton.styleFrom(
-                        primary: Colors.blue,
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
@@ -186,14 +217,21 @@ class NavigationDrawer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => Drawer(
-        child: SingleChildScrollView(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: <Widget>[
-              buildHeader(context),
-              buildMenuItems(context),
-            ],
-          ),
+        child: Stack(
+          children: <Widget>[
+            Expanded(child: Container(
+              color: Color(0xffFCFDF2),
+            ),),
+            SingleChildScrollView(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: <Widget>[
+                  buildHeader(context),
+                  buildMenuItems(context),
+                ],
+              ),
+            ),
+          ],
         ),
       );
 

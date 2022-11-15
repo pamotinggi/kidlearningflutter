@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kidlearningflutter/screen/level_guide/sentence_level.dart';
 
 import '../profilescreen.dart';
 
@@ -34,7 +35,10 @@ class _LevelscreenState extends State<Levelscreen> {
                 height: 100,
                 width: 200,
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).push(
+                        MaterialPageRoute(builder: (context) => Sentencelevel()));
+                  },
                   child: Text(
                     "Sentence Levels",
                     style: TextStyle(
