@@ -27,6 +27,7 @@ class _WriteZState extends State<WriteZ> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Color(0xff3B3486),
         title: Text("How to write Z"),
       ),
       body: Center(

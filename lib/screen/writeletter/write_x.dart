@@ -26,6 +26,7 @@ class _WriteXState extends State<WriteX> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Color(0xff3B3486),
         title: Text("How to write X"),
       ),
       body: Center(
