@@ -12,6 +12,7 @@ class _ExampleRState extends State<ExampleR> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Color(0xff3B3486),
         title: Text("Example for R"),
       ),
       body: Center(

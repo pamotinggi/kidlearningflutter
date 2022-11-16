@@ -12,6 +12,7 @@ class _ExampleBState extends State<ExampleB> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Color(0xff3B3486),
         title: Text("Example for B"),
       ),
       body: Center(
