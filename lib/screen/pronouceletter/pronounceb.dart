@@ -33,6 +33,7 @@ class _PronounceBState extends State<PronounceB> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Color(0xff3B3486),
         title: Text("How to Pronounce B"),
       ),
       body: Center(

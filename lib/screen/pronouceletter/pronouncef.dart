@@ -32,6 +32,7 @@ class _PronounceFState extends State<PronounceF> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Color(0xff3B3486),
         title: Text("How to Pronounce F"),
       ),
       body: Center(
