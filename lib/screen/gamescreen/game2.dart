@@ -184,9 +184,7 @@ class _Game2State extends State<Game2> {
               ),
             if (gameOver)
               Center(
-                child: RaisedButton(
-                  textColor: Colors.white,
-                  color: Colors.pink,
+                child: ElevatedButton(
                   child: Text("New Game"),
                   onPressed: () {
                     initGame();
