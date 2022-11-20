@@ -2,6 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:kidlearningflutter/screen/about.dart';
 import 'package:kidlearningflutter/screen/alphabetscreen.dart';
 import 'package:kidlearningflutter/screen/games.dart';
 import 'package:kidlearningflutter/screen/loginscreen.dart';
@@ -247,7 +248,10 @@ class NavigationDrawer extends StatelessWidget {
           ListTile(
             leading: const Icon(EvaIcons.info),
             title: const Text('About'),
-            onTap: () {},
+            onTap: () {
+              Navigator.of(context)
+                  .push(MaterialPageRoute(builder: (context) => About()));
+            },
           ),
           ListTile(
             leading: const Icon(Icons.logout),
