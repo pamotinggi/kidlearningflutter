@@ -16,6 +16,7 @@ class _GamescoremainState extends State<Gamescoremain> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Color(0xff3B3486),
         leading: IconButton(
             icon: Icon(Icons.arrow_back, color: Colors.black),
             onPressed: () {
@@ -34,6 +35,9 @@ class _GamescoremainState extends State<Gamescoremain> {
                 width: 190,
                 height: 100,
                 child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    primary: Color(0xffFFE9B1),
+                  ),
                   onPressed: () {
                     Navigator.of(context).pushReplacement(MaterialPageRoute(
                         builder: (context) => Gamescorelvl1()));
@@ -41,6 +45,7 @@ class _GamescoremainState extends State<Gamescoremain> {
                   child: Text(
                     "Level 1",
                     style: TextStyle(
+                      color: Colors.black,
                       fontSize: 40,
                     ),
                   ),
@@ -51,6 +56,9 @@ class _GamescoremainState extends State<Gamescoremain> {
                 width: 190,
                 height: 100,
                 child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    primary: Color(0xffFFE9B1),
+                  ),
                   onPressed: () {
                     Navigator.of(context).pushReplacement(MaterialPageRoute(
                         builder: (context) => Gamescorelvl2()));
@@ -58,6 +66,7 @@ class _GamescoremainState extends State<Gamescoremain> {
                   child: Text(
                     "Level 2",
                     style: TextStyle(
+                      color: Colors.black,
                       fontSize: 40,
                     ),
                   ),
@@ -68,6 +77,9 @@ class _GamescoremainState extends State<Gamescoremain> {
                 width: 190,
                 height: 100,
                 child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    primary: Color(0xffFFE9B1),
+                  ),
                   onPressed: () {
                     Navigator.of(context).pushReplacement(MaterialPageRoute(
                         builder: (context) => Gamescorelvl3()));
@@ -75,6 +87,7 @@ class _GamescoremainState extends State<Gamescoremain> {
                   child: Text(
                     "Level 3",
                     style: TextStyle(
+                      color: Colors.black,
                       fontSize: 40,
                     ),
                   ),
