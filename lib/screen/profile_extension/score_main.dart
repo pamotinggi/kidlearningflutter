@@ -16,6 +16,7 @@ class _ScoreMainState extends State<ScoreMain> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Color(0xff3B3486),
         leading: IconButton(
           icon: Icon(
             Icons.arrow_back,
@@ -39,7 +40,7 @@ class _ScoreMainState extends State<ScoreMain> {
                 height: 170,
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    primary: Colors.blue,
+                    primary: Color(0xffFFE9B1),
                   ),
                   onPressed: () {
                     Navigator.of(context).pushReplacement(MaterialPageRoute(
@@ -50,6 +51,7 @@ class _ScoreMainState extends State<ScoreMain> {
                       "Sentence Score",
                       style: TextStyle(
                         fontSize: 30,
+                        color: Colors.black,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
@@ -62,7 +64,7 @@ class _ScoreMainState extends State<ScoreMain> {
                 height: 170,
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    primary: Colors.blue,
+                    primary: Color(0xffFFE9B1),
                   ),
                   onPressed: () {
                     Navigator.of(context).pushReplacement(MaterialPageRoute(
@@ -72,6 +74,7 @@ class _ScoreMainState extends State<ScoreMain> {
                     "Game Score",
                     style: TextStyle(
                       fontSize: 30,
+                      color: Colors.black,
                       fontWeight: FontWeight.bold,
                     ),
                   ),

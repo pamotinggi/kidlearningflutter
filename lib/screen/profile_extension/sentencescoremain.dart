@@ -19,14 +19,15 @@ class _SentenceScoreMainState extends State<SentenceScoreMain> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Color(0xff3B3486),
         leading: IconButton(
           icon: Icon(
             Icons.arrow_back,
             color: Colors.red,
           ),
-          onPressed: (){
-            Navigator.of(context).push(
-                MaterialPageRoute(builder: (context) => ScoreMain()));
+          onPressed: () {
+            Navigator.of(context)
+                .push(MaterialPageRoute(builder: (context) => ScoreMain()));
           },
         ),
         title: Text("Sentence Score"),
@@ -44,11 +45,19 @@ class _SentenceScoreMainState extends State<SentenceScoreMain> {
                     height: 90,
                     width: 90,
                     child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        primary: Color(0xffFFE9B1),
+                      ),
                       onPressed: () {
                         Navigator.of(context).pushReplacement(MaterialPageRoute(
                             builder: (context) => Senscorelvl1()));
                       },
-                      child: Text("LEVEL 1"),
+                      child: Text(
+                        "LEVEL 1",
+                        style: TextStyle(
+                          color: Colors.black,
+                        ),
+                      ),
                     ),
                   ),
                   SizedBox(width: 30),
@@ -56,11 +65,19 @@ class _SentenceScoreMainState extends State<SentenceScoreMain> {
                     height: 90,
                     width: 90,
                     child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        primary: Color(0xffFFE9B1),
+                      ),
                       onPressed: () {
                         Navigator.of(context).pushReplacement(MaterialPageRoute(
                             builder: (context) => Senscorelvl2()));
                       },
-                      child: Text("LEVEL 2"),
+                      child: Text(
+                        "LEVEL 2",
+                        style: TextStyle(
+                          color: Colors.black,
+                        ),
+                      ),
                     ),
                   ),
                 ],
@@ -73,11 +90,19 @@ class _SentenceScoreMainState extends State<SentenceScoreMain> {
                     height: 90,
                     width: 90,
                     child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        primary: Color(0xffFFE9B1),
+                      ),
                       onPressed: () {
                         Navigator.of(context).pushReplacement(MaterialPageRoute(
                             builder: (context) => Senscorelvl3()));
                       },
-                      child: Text("LEVEL 3"),
+                      child: Text(
+                        "LEVEL 3",
+                        style: TextStyle(
+                          color: Colors.black,
+                        ),
+                      ),
                     ),
                   ),
                   SizedBox(width: 30),
@@ -85,11 +110,19 @@ class _SentenceScoreMainState extends State<SentenceScoreMain> {
                     height: 90,
                     width: 90,
                     child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        primary: Color(0xffFFE9B1),
+                      ),
                       onPressed: () {
                         Navigator.of(context).pushReplacement(MaterialPageRoute(
                             builder: (context) => Senscorelvl4()));
                       },
-                      child: Text("LEVEL 4"),
+                      child: Text(
+                        "LEVEL 4",
+                        style: TextStyle(
+                          color: Colors.black,
+                        ),
+                      ),
                     ),
                   ),
                 ],
@@ -99,11 +132,19 @@ class _SentenceScoreMainState extends State<SentenceScoreMain> {
                 width: 90,
                 height: 90,
                 child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    primary: Color(0xffFFE9B1),
+                  ),
                   onPressed: () {
                     Navigator.of(context).pushReplacement(MaterialPageRoute(
                         builder: (context) => Senscorelvl5()));
                   },
-                  child: Text("Level 5"),
+                  child: Text(
+                    "Level 5",
+                    style: TextStyle(
+                      color: Colors.black,
+                    ),
+                  ),
                 ),
               ),
             ],

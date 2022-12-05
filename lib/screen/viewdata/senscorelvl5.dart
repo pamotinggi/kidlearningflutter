@@ -39,6 +39,7 @@ class _Senscorelvl5State extends State<Senscorelvl5> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Color(0xff3B3486),
         leading: IconButton(
           icon: Icon(
             Icons.arrow_back,
